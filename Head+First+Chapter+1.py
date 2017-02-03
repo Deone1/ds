@@ -26,13 +26,13 @@ vowels = ['a','e','i','o','u']
 word = raw_input("Write a word: ")
 found = []
 for letter in word :
-    if letter in vowels :    
+    if letter in vowels :
         if letter not in found:
             found.append(letter)
 for vowels in found :
     print vowels
 print found
-    
+
 
 
 # ## Using [] as a subset operator for iterations etc ..Printing in Reverse
@@ -61,12 +61,12 @@ vowels = ['a','e','i','o','u']
 word = raw_input("Write a word: ")
 found = {}
 for letter in word :
-        if letter in vowels : 
+        if letter in vowels :
             if letter in found :
                 found[letter] = found[letter] + 1
             else :
                 found[letter]= 1
-            
+
 for letter,count in found.items():
     print "This %s occured %d times" %(letter,count)
 
@@ -118,12 +118,12 @@ pprint.pprint(people)
 set1= ['[','{','(']
 def next_bracket(s) :
     if s == '[' :
-        return ']' 
+        return ']'
     elif s =='{' :
         return '}'
     elif s =='(' :
         return ')'
-    
+
 wordlist= ['jaffa']
 def delpattern(word):
     j = 0
@@ -135,7 +135,7 @@ def delpattern(word):
                 word[i] = 0
                 word[i+1] = 0
                 j = j+2
-                
+
     for x in range(j):
         word.remove(0)
     print(word)
@@ -145,26 +145,26 @@ def delpattern(word):
             print("can be solved")
         else:
             print("Can't be solved")
-        
+
     else :
         if wordlist[-1] == ''.join(word) :
             print("Cant be saalved")
-            
+
         else :
             wordlist.append(''.join(word))
             delpattern(word)
-            
-    
-        
-        
-        
-    
-    
-         
 
-        
-    
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
 # In[67]:
@@ -246,7 +246,7 @@ happy_bday.sing_me_a_song()
 bulls_on_parade.sing_me_a_song()
 
 
-# ## Inheritance 
+# ## Inheritance
 
 # In[94]:
 
@@ -259,7 +259,7 @@ class Car(Vehicle):
         ass.general_usage()
         ass.wheels= 4
         ass.has_roof = True
-    
+
     def specific_usage(ass):
         print "Car has",ass.wheels,"wheels"
 
@@ -268,10 +268,10 @@ class Bike(Vehicle):
         print "I'm a Bike"
         self.wheels= 2
         self.has_roof = False
-    
+
     def specific_usage(self):
         print "time Pass"
-        
+
 c = Car()
 c.specific_usage()
 
@@ -289,7 +289,7 @@ To = raw_input('To Number: ')
 Step = raw_input('Step size: ')
 try :
     lista = range(int(From),int(To),Step)
-    
+
 ##except Exception as e:
 ##    print "Exception occured : ",e
 ##    lista=None
@@ -297,7 +297,7 @@ try :
 
 ## How to findout the type of Exception
 
-    
+
 except TypeError as e:
     print "Exception occured : ",type(e).__name__
     lista=None
@@ -307,9 +307,9 @@ except ValueError as e:
     print "Value Error"
     lista=None
 print lista
-    
-    
-    
+
+
+
 
 
 # ## Generator Functions
@@ -321,7 +321,7 @@ print lista
 
 # In[101]:
 
-from urllib import urlopen 
+from urllib import urlopen
 WORD_URL = "http://learncodethehardway.org/words.txt"
 WORDS = []
 for word in urlopen(WORD_URL).readlines() :
@@ -330,10 +330,5 @@ for word in urlopen(WORD_URL).readlines() :
 
 # In[105]:
 
+print WORDS
 WORDS
-
-
-# In[ ]:
-
-
-
